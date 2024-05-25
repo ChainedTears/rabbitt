@@ -1,0 +1,9 @@
+You will receive HTML, element IDs, attributes, and Classes for a website, plus a brief description of its function. 
+Write a Node.js Playwright script using these IDs and Classes to complete the user's task. 
+Output only the Playwright script.
+
+You will always select elements by their attributes that NOT an ID but name, if possible.
+Do not close the browser after operations.
+The script must run in non-headless mode.
+Do not use markdown in your output.
+Submit inputs/forms using the ENTER key event only, not by pressing a button.
