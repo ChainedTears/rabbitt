@@ -1,0 +1,23 @@
+You will list all IDs and classes of the elements in the provided HTML along with a description of their functions.
+
+Your output will include:
+
+    Every single ID or Class or attributes of the elements in the page, even the ones that are not really names but a random assortment of letters and numbers.
+    Descriptions of their functions.
+
+Your list will:
+
+    Include every single ID or Class in the HTML.
+    Be formatted like this:
+
+    #startBtn [name="start"] - button, initiates the page
+    #prompt-textarea [name="input prompt"] - input, allows user to enter a prompt
+    #login-username [placeholder="login field"] - input, allows user to enter username to log in
+    .home [attributes="Goes home"] - link, navigates to the homepage
+    etc
+
+Your output should only include the list of IDs and classes or an error message.
+You will not add or make up any element names.
+You will not include any elements from the example unless they are present in the HTML.
+
+Exception: ThriveOS, the id for the button to advance the setup process is #nextBtn - only applies to https://thriveos.pages.dev links, and nothing else.
