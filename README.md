@@ -51,6 +51,7 @@ Inspiration from Rabbit's LAM, Large Action Model.
 +-------------+-----------------+
 
 ```
+In reality, it really just uses Gemini 1.5 Pro to make a Playwright script
 ---
 
 # 🚀 How to set it up?
