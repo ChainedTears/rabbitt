@@ -68,5 +68,10 @@ node server.js
 After that, open up the .env files and put 2 API keys in. You can get them for free at Google's [AI Studio](https://aistudio.google.com)
 go to https://localhost:3000 on any web browser connected to the same WiFi to see the results! 😎
 
+# 🎥 Video Demos
+[Sending Prompt to ChatGPT](https://i.e-z.host/c2e9iqos.mp4) (silly AI) <br>
+[Logging in to Discord](https://i.e-z.host/boarys0m.mp4) (... fake passw ofc + no captcha support) <br>
+[ThriveOS](https://i.e-z.host/dy0vm9p8.mp4) (ITS MY WEBSITE!!!!)
+
 # 🌐 [ThriveOS](https://thriveos.pages.dev/)
-Advertisement for a WebOS I made :) 
+Advertisement for custom a web based operating system I made :) 
