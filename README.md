@@ -55,7 +55,7 @@ In reality, it really just uses Gemini 1.5 Pro to make a Playwright script
 ---
 
 # 🚀 How to set it up?
-Easy peasy lemon squeezy! Just copy and paste these commands into your terminal:
+Easy peasy lemon squeezy! Just copy and paste these commands into your terminal, or run install.bat:
 
 ```bash
 git clone https://github.com/GikitSRC/rabbitt
