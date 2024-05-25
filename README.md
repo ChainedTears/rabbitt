@@ -59,6 +59,7 @@ Easy peasy lemon squeezy! Just copy and paste these commands into your terminal:
 ```bash
 git clone https://github.com/GikitSRC/rabbitt
 cd rabbitt
+npm init -y
 npm install
 npx playwright install
 node server.js
