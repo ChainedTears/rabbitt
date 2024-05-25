@@ -65,7 +65,8 @@ npm install
 npx playwright install
 node server.js
 ```
-Then, go to https://localhost:3000 on any web browser connected to the same WiFi! 😎
+After that, open up the .env files and put 2 API keys in. You can get them for free at Google's [AI Studio](https://aistudio.google.com)
+go to https://localhost:3000 on any web browser connected to the same WiFi to see the results! 😎
 
 # 🌐 [ThriveOS](https://thriveos.pages.dev/)
 Advertisement for a WebOS I made :) 
