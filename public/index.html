@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rabbitt SAM</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <style>
+        body {
+            font-family: Monospace, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            color: white;
+        }
+
+        .container {
+            background: rgba(40, 40, 40, 0.8);
+            padding: 50px;
+            border-radius: 25px;
+            width: 50%;
+            text-align: center;
+            color: white;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        input,
+        textarea {
+            background-color: rgba(100, 100, 100, 0.8);
+            border-radius: 25px;
+            border: 1px solid transparent;
+            font-family: monospace;
+            text-align: center;
+            padding: 10px;
+            width: 50%;
+            margin-top: 15px;
+            margin-bottom: 7.5px;
+            outline: none;
+            color: white;
+            resize: none;
+            transition: 0.3s all;
+        }
+
+        input:hover,
+        textarea:hover {
+            transform: scale(1.1);
+        }
+
+        button {
+            background-color: rgba(100, 100, 100, 0.8);
+            border: 1px solid transparent;
+            border-radius: 25px;
+            padding: 10px;
+            font-family: monospace;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s all;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        .history-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(60, 60, 60, 1);
+            padding: 20px;
+            border-radius: 25px;
+            width: 50%;
+            max-height: 70%;
+            overflow-y: scroll;
+            text-align: center;
+            color: white;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+        }
+
+        .history-popup.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .history-popup h3 {
+            margin-top: 0;
+        }
+
+        .history-popup button {
+            margin-top: 10px;
+        }
+
+        .history-item {
+            margin-bottom: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-radius: 25px;
+            padding: 10px;
+        }
+
+        .history-item:hover {
+            transform: scale(0.9);
+            background-color: rgba(100, 100, 100, 0.8);
+        }
+
+        .history-popup::-webkit-scrollbar {
+            width: 0px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Rabbitt SAM</h1>
+        <p>Named Small Action Model after Rabbit's Large Action Model.</p>
+        <br>
+        <label for="website-url">Website URL</label>
+        <br>
+        <input type="text" id="website-url" placeholder="Enter Target Website's URL" required>
+        <br>
+        <label for="instructions">Instructions</label>
+        <br>
+        <textarea id="instructions" rows="8" placeholder="Enter instructions for Rabbitt" required></textarea>
+        <br>
+        <br>
+        <button id="run-script">Run Script</button>
+        <br>
+        <br>
+        <button id="history-button">View History</button>
+        <h3>Output</h3>
+        <div id="output" class="output"></div>
+    </div>
+
+    <div class="history-popup" id="history-popup">
+        <h3>Prompt History</h3>
+        <button id="clear-history">Clear History</button>
+        <div id="history" class="history"></div>
+        <button id="close-popup">Close</button>
+    </div>
+
+    <div class="footer"><p>&copy;2024 Rabbitt &bullet; <a href="https://github.com/GikitSRC/rabbitt"><b>Github</b></a> &bullet; <a href="https://chainedtears.dev"><b>Made by Arthur Jiang</b></a></p></div>
+    <script src="forwarding.js"></script>
+</body>
+
+</html>
