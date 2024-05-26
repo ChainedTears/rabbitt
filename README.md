@@ -65,8 +65,8 @@ npm install
 npx playwright install
 node server.js
 ```
-After that, open up the .env files and put 2 API keys in. You can get them for free at Google's [AI Studio](https://aistudio.google.com)
-go to https://localhost:3000 on any web browser connected to the same WiFi to see the results! 😎
+After that, open up the .env files and put 2 API keys in. You can get them for free at [AI Studio](https://aistudio.google.com). <br>
+Go to [this website](https://localhost:3000) on any web browser connected to the same WiFi to see the results! 😎
 
 # 🎥 Video Demos
 [Sending Prompt to ChatGPT](https://i.e-z.host/c2e9iqos.mp4) (silly AI) <br>
