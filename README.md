@@ -72,6 +72,10 @@ go to https://localhost:3000 on any web browser connected to the same WiFi to se
 [Sending Prompt to ChatGPT](https://i.e-z.host/c2e9iqos.mp4) (silly AI) <br>
 [Logging in to Discord](https://i.e-z.host/boarys0m.mp4) (... fake passw ofc + no captcha support) <br>
 [ThriveOS](https://i.e-z.host/dy0vm9p8.mp4) (ITS MY WEBSITE!!!!)
+<br>
+<br>
+By the way... you can control all of this + sending message on Discord with your R1. <br>
+More information [here](https://github.com/GikitSRC/rabbitt_integration)
 
 # 🌐 [ThriveOS](https://thriveos.pages.dev/)
 Advertisement for custom a web based operating system I didn't finish yet :) 
