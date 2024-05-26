@@ -1,6 +1,6 @@
 # 🐰 rabbitt
 An AI. But not just any AI - an "agent" that can do tasks on your behalf. Fun weekend side project I made 😄 <br>
-Inspiration from Rabbit's LAM, Large Action Model.
+You can use your R1 to send Discord messages and control Rabbitt - [here](https://github.com/GikitSRC/rabbitt_integration)
 
 ---
 
