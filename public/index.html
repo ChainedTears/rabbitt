@@ -68,7 +68,7 @@
             transform: scale(1.1);
         }
 
-        .history-popup {
+        .history-popup, .script-popup {
             display: none;
             position: fixed;
             top: 50%;
@@ -78,8 +78,8 @@
             padding: 20px;
             border-radius: 25px;
             width: 50%;
-            max-height: 70%;
-            overflow-y: scroll;
+            height: 60%;
+            overflow-y: hidden;
             text-align: center;
             color: white;
             transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -141,10 +141,7 @@
         <textarea id="instructions" rows="8" placeholder="Enter instructions for Rabbitt" required></textarea>
         <br>
         <br>
-        <button id="run-script">Run Script</button>
-        <br>
-        <br>
-        <button id="history-button">View History</button>
+        <button id="run-script">Run Script</button> <button id="history-button">History</button>
         <h3>Output</h3>
         <div id="output" class="output"></div>
     </div>
@@ -152,11 +149,13 @@
     <div class="history-popup" id="history-popup">
         <h3>Prompt History</h3>
         <button id="clear-history">Clear History</button>
+        <br>
+        <br>
         <div id="history" class="history"></div>
         <button id="close-popup">Close</button>
     </div>
 
-    <div class="footer"><p>&copy;2024 Rabbitt &bullet; <a href="https://github.com/GikitSRC/rabbitt"><b>Github</b></a> &bullet; <a href="https://chainedtears.dev"><b>Made by Arthur Jiang</b></a></p></div>
+    <div class="footer"><p>&copy;2024 Rabbitt &bullet; <a href="https://github.com/GikitSRC/rabbitt"><b>Github</b></a> &bullet; <a href="https://github.com/GikitSRC/rabbitt_integration"><b>Rabbithole Integration</b></a> &bullet; <a href="https://chainedtears.dev"><b>Made by Arthur Jiang</b></a></p></div>
     <script src="forwarding.js"></script>
 </body>
 
