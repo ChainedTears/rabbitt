@@ -1,6 +1,6 @@
 # 🐰 rabbitt
 An AI. But not just any AI - an "agent" that can do tasks on your behalf. Fun weekend side project I made 😄 <br>
-You can use your R1 to send Discord messages and control Rabbitt - [here](https://github.com/GikitSRC/rabbitt_integration)
+You can use your R1 to send Discord messages and control Rabbitt - [here](https://github.com/GikitSRC/rabbitt_integration). If you like this project, leave it a ⭐!
 
 ---
 
