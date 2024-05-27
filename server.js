@@ -9,7 +9,7 @@ const {
     HarmCategory,
     HarmBlockThreshold,
 } = require('@google/generative-ai');
-require('dotenv').config(); 
+require('dotenv').config();
 
 const app = express();
 const port = 3000;
@@ -52,7 +52,7 @@ const descriptionSafety = [
 
 const generateDescription = async (htmlData) => {
     const descriptionModel = descriptionAI.getGenerativeModel({
-        model: 'gemini-1.5-pro-latest',
+        model: 'gemini-1.5-flash-latest',
         systemInstruction: descriptionData,
     });
 
@@ -85,7 +85,7 @@ const safetySettings = [
 
 const generatePlaywrightScript = async (websiteDescription, htmlData, instructions, websiteLink) => {
     const model = playwrightAI.getGenerativeModel({
-        model: 'gemini-1.5-pro-latest',
+        model: 'gemini-1.5-flash-latest',
         systemInstruction: promptData,
     });
 
