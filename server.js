@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const fs = require('fs');
 const axios = require('axios');
+const Groq = require('groq-sdk');
 const { spawn } = require('child_process');
 const {
     GoogleGenerativeAI,
@@ -19,6 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const promptPath = 'files/prompt.txt';
 const descriptionPromptTxt = 'files/descPrompt.txt';
+const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 const readPromptData = (filePath) => {
     try {
@@ -84,27 +86,29 @@ const safetySettings = [
 ];
 
 const generatePlaywrightScript = async (websiteDescription, htmlData, instructions, websiteLink) => {
-    const model = playwrightAI.getGenerativeModel({
-        model: 'gemini-1.5-flash-latest',
-        systemInstruction: promptData,
-    });
-
-    const chatSession = model.startChat({
-        generationConfig,
-        safetySettings,
-        history: [],
-    });
-
     console.log('Generating Playwright script...');
-    const result = await chatSession.sendMessage(`
-        Instructions: ${instructions}
-        Description: ${websiteDescription}
-        Website Link: ${websiteLink}
-        HTML:
-        ${htmlData}
-        Javascript: Not provided
-    `);
-    const script = result.response.text().replace(/```javascript|```/g, '');
+    const chatCompletion = await groq.chat.completions.create({
+        messages: [
+            { role: "system", content: promptData },
+            {
+                role: "user", content: `
+                Instructions: ${instructions}
+                Description: ${websiteDescription}
+                Website Link: ${websiteLink}
+                HTML:
+                ${htmlData}
+                Javascript: Not provided
+            ` }
+        ],
+        model: "llama3-70b-8192",
+        temperature: 0.1,
+        max_tokens: 8192,
+        top_p: 1,
+        stream: false,
+        stop: null
+    });
+
+    const script = chatCompletion.choices[0].message.content.replace(/```javascript|```/g, '');
     console.log('Playwright Script Generated:', script);
     return script;
 };
