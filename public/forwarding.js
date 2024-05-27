@@ -16,7 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
             historyItem.addEventListener('click', () => {
                 websiteUrlInput.value = item.url;
                 instructionsInput.value = item.instructions;
-                runScript();
+                const popup = document.getElementById('history-popup');
+                popup.classList.remove('show');
+                setTimeout(() => popup.style.display = 'none', 300);
+                // runScript(); - uncomment to make it run script after you click it
             });
             historyDiv.appendChild(historyItem);
         });
@@ -88,3 +91,4 @@ document.getElementById('close-popup').addEventListener('click', function () {
 document.getElementById('clear-history').addEventListener('click', function () {
     document.getElementById('history').innerHTML = '';
 });
+
