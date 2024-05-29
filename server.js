@@ -5,6 +5,7 @@ const fs = require('fs');
 const axios = require('axios');
 const Groq = require('groq-sdk');
 const { spawn } = require('child_process');
+const fetch = require('node-fetch');
 const {
     GoogleGenerativeAI,
     HarmCategory,
@@ -138,8 +139,20 @@ const getWebsiteHTML = async (url) => {
         await fs.promises.writeFile('files/html.txt', htmlData);
         return htmlData;
     } catch (error) {
-        console.error('Error fetching website HTML:', error);
-        return `Error fetching website HTML: ${error}`;
+        console.error('Error fetching website HTML with axios:', error);
+
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw new Error(`Fetch failed with status ${response.status}`);
+            }
+            const htmlData = await response.text();
+            await fs.promises.writeFile('files/html.txt', htmlData);
+            return htmlData;
+        } catch (fetchError) {
+            console.error('Error fetching website HTML with fetch:', fetchError);
+            return `Error fetching website HTML: ${fetchError}`;
+        }
     }
 };
 
